@@ -34,7 +34,9 @@ function animeList () {
             ul.innerHTML += `<li>${animeArray.title}</li>`
         })
         ul.addEventListener('click', crossOff)
-    
+        ul.addEventListener('mouseover', redText )
+        ul.addEventListener('mouseout', blackText)
+        // console.log(ul)
     })
 
         //         const ul = document.getElementById('watchlist')
@@ -69,3 +71,10 @@ const crossOff = e => {
     // } 
 
     
+const redText = e => {
+    e.target.style.color = "red"
+}
+
+const blackText = e => {
+    e.target.style.color = "white"
+}
